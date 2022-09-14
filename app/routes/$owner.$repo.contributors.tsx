@@ -40,8 +40,6 @@ export const loader: LoaderFunction = async ({ params }) => {
     `https://api.github.com/repos/${owner}/${repo}/commits`
   );
 
-  console.log(res);
-
   if (!res.ok) {
     throw new Error(
       "The specified github repo either does not exist, or is not public."
